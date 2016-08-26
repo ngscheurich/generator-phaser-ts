@@ -1,0 +1,9 @@
+doctype html
+html(lang='en')
+  head
+    title Phaser Game
+    link(href='/main.css', rel='stylesheet')
+
+  body
+    - const script = process.env.NODE_ENV === 'production' ? 'bundle.min.js' : 'bundle.js'
+    script(src='/' + script)

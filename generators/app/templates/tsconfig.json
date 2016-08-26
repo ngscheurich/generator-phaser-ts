@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "noImplicitAny": true,
+    "outDir": "./build",
+    "rootDir": "./src"
+  },
+  "files": [
+    "./typings/index.d.ts",
+    "./src/app.ts"
+  ]
+}
