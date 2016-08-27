@@ -17,7 +17,7 @@ say "Creating initial development build..."
 gulp build
 gulp bundle
 
-HEROKU_USER = "$(heroku auth:whoami)"
+HEROKU_USER="$(heroku auth:whoami)"
 if hash heroku 2>/dev/null && [ "$HEROKU_USER" != "not logged in" ]; then
     say "Heroku user detected. Creating Heroku app..."
     heroku create
