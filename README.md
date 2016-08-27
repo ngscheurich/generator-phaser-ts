@@ -59,7 +59,7 @@ This project uses [Gulp][6] to automate various common development tasks:
 For convenience, this project includes a basic Node.js application that serves
 up your games courtesy of the [Express][7] framework. To start the Express
 server, run `npm start`. You should now be able to see your game at something
-along the lines of [http://localhost:3000][http://localhost:3000].
+along the lines of [http://localhost:3000](http://localhost:3000).
 
 ## Deployment
 
