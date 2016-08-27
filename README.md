@@ -68,7 +68,9 @@ Included is a [Heroku][8]-compatible [Procfile][9] so—assuming you have the
 your game up on them internets should be as simple as:
 
     $ gulp deploy
-    
+
+You can `npm run production` to serve your game using minified code.
+
 ## Contributing
 
 Please note that this an opinionated tool based on my particular preferences.
