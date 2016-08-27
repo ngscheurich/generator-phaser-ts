@@ -69,7 +69,7 @@ your game up on them internets should be as simple as:
 
     $ gulp deploy
 
-You can `npm run production` to serve your game using minified code.
+You can `npm run production` to locally serve your game using minified code.
 
 ## Contributing
 
