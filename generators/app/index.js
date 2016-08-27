@@ -21,7 +21,7 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
     if (this.answers.ready) {
-      this.copy('.gitignore');
+      this.copy('gitignore', '.gitgnore');
       this.copy('LICENSE');
       this.copy('Procfile');
       this.copy('README.md');
