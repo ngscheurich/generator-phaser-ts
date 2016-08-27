@@ -1,0 +1,74 @@
+# Phaser TypeScript project generator
+
+This provides a handy jump-start for a [Phaser][1] project using [TypeScript][2].
+In addition to a ready-to-code scaffolding, you get great stuff like:
+
+- Gulp tasks for like, all sorts of useful things
+- A Heroku deployment setup
+- The satisfaction of helping out the litle guy (?)
+
+## Requirements
+
+There’s really only one measly requirements for this project:
+
+- [Typings][5], installed globally
+
+Of course, you’ll also need [Node.js][^3], [npm][^4], and [Yeoman][11], but you
+already knew that, no?
+
+## Installation
+
+    $ npm install -g generator-phaser-ts
+
+That’s it.
+
+## Usage
+
+### Development
+
+This project uses [Gulp][6] to automate various common development tasks:
+
+- `gulp lint`: Processes all .ts files in the src directory with `tslint` and
+  displays the results
+- `gulp build`: Compiles all .ts files in the src directory after running the
+  `lint` task; outputs .js files to the build directory
+- `gulp bundle`: Concatenates all .js files in the build and lib directories
+  into a single file: dist/bundle.js
+- `gulp compress`: Uglifies dist/bundle.js; outputs dist/bundle.min.js
+- `gulp watch`: Watches for changes to files; when a change to a file is
+  detected, runs the appropriate task (`build` or `bundle`)
+- `gulp deploy`: See below.
+- `gulp`: The default Gulp task. Runs the `build` task followed by the `bundle`
+  task.
+
+###  Testing
+
+For convenience, this project includes a basic Node.js application that serves
+up your games courtesy of the [Express][7] framework. To start the Express
+server, run `npm start`. You should now be able to see your game at something
+along the lines of http://localhost:3000.
+
+### Deployment
+
+Also included is a [Heroku][8]-compatible [Procfile][9] so—assuming you have
+the [Heroku Command Line Interface][9] installed and you’re logged in—getting
+your game up on them internets should be as simple as:
+
+    $ gulp deploy
+    
+### Contributing
+
+Please note that this an opinionated tool based on my particular preferences.
+That being said, all PRs are welcome!
+
+[1]: http://phaser.io/
+[2]: https://www.typescriptlang.org/
+[3]: https://nodejs.org/en/
+[4]: https://www.npmjs.com/
+[5]: https://github.com/typings/typings
+[6]: http://gulpjs.com/
+[7]: https://expressjs.com/
+[8]: https://www.heroku.com/
+[9]: https://devcenter.heroku.com/articles/procfile
+[10]: https://devcenter.heroku.com/articles/heroku-command-line
+[11]: http://yeoman.io/
