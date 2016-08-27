@@ -17,7 +17,12 @@ say "Creating initial development build..."
 gulp build
 gulp bundle
 
-say "Creating Heroku app..."
-heroku create
+HEROKU_USER = "$(heroku auth:whoami)"
+if hash heroku 2>/dev/null && [ "$HEROKU_USER" != "not logged in" ]; then
+    say "Heroku user detected. Creating Heroku app..."
+    heroku create
+else
+    say "Not creating Heroku app. Install the Heroku CLI, login, and then `heroku create`."
+fi
 
 say "All done! Run \`npm start\` to preview your new game."
