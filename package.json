@@ -1,6 +1,6 @@
 {
   "name": "generator-phaser-ts",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A scaffolded TypeScript Phaser game template with Gulp tasks for common dev needs.",
   "homepage": "https://github.com/ngscheurich/generator-phaser-ts",
   "author": {
