@@ -12,13 +12,14 @@ __________________________________________________________________________
 This provides a handy jump-start for a [Phaser][1] project using [TypeScript][2].
 In addition to a ready-to-code scaffolding, you get great stuff like:
 
-- Gulp tasks for like, all sorts of useful things
+- A fully-functional Phaser project, complete with type TypeScript type definitions
+- Automated tasks for compilation, concatenation, minification, et al.
+- A demo “game” to get you going
 - A Heroku deployment setup
-- The satisfaction of helping out the litle guy (?)
 
 ## Requirements
 
-There’s really only one measly requirements for this project:
+There’s really only one measly requirement for this project:
 
 - [Typings][5], installed globally
 
