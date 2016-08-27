@@ -13,7 +13,7 @@ There’s really only one measly requirements for this project:
 
 - [Typings][5], installed globally
 
-Of course, you’ll also need [Node.js][^3], [npm][^4], and [Yeoman][11], but you
+Of course, you’ll also need [Node.js][3], [npm][4], and [Yeoman][11], but you
 already knew that, no?
 
 ## Installation
@@ -24,7 +24,12 @@ That’s it.
 
 ## Usage
 
-### Development
+    $ yo phaser-ts
+    
+This gets your files all in the proper places, installs all software
+requirements, and does an initial build of the included demo game.
+
+## Development
 
 This project uses [Gulp][6] to automate various common development tasks:
 
@@ -41,25 +46,30 @@ This project uses [Gulp][6] to automate various common development tasks:
 - `gulp`: The default Gulp task. Runs the `build` task followed by the `bundle`
   task.
 
-###  Testing
-
 For convenience, this project includes a basic Node.js application that serves
 up your games courtesy of the [Express][7] framework. To start the Express
 server, run `npm start`. You should now be able to see your game at something
-along the lines of http://localhost:3000.
+along the lines of [http://localhost:3000][http://localhost:3000].
 
-### Deployment
+## Deployment
 
-Also included is a [Heroku][8]-compatible [Procfile][9] so—assuming you have
-the [Heroku Command Line Interface][9] installed and you’re logged in—getting
+Included is a [Heroku][8]-compatible [Procfile][9] so—assuming you have the
+[Heroku Command Line Interface][9] installed and you’re logged in—getting
 your game up on them internets should be as simple as:
 
     $ gulp deploy
     
-### Contributing
+## Contributing
 
 Please note that this an opinionated tool based on my particular preferences.
-That being said, all PRs are welcome!
+That being said, all pull requests are welcome!
+
+## License
+
+Generator software is ISC (c) 2016 Nicholas Scheurich
+
+Phaser is MIT (c) 2016 Richard Davey, Photo Storm Ltd.
+
 
 [1]: http://phaser.io/
 [2]: https://www.typescriptlang.org/
