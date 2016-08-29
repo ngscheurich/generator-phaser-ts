@@ -4,7 +4,7 @@ C='\033[0;32m'
 N='\033[0m'
 
 say() {
-    echo "\n${C}*${N} $1"
+    echo "\n${C}>${N} $1"
 }
 
 say "Installing Node.js packages..."
@@ -16,6 +16,11 @@ typings install 2>/dev/null
 say "Creating initial development build..."
 gulp build
 gulp bundle
+
+say "Initializing Git repository..."
+git init
+git add .
+git commit -m "Initial commit from generator-phaser-ts"
 
 HEROKU_USER="$(heroku auth:whoami)"
 if hash heroku 2>/dev/null && [ "$HEROKU_USER" != "not logged in" ]; then

@@ -1,5 +1,3 @@
 /node_modules
 /typings
 /build
-/dist/*
-!/dist/bundle.min.js
