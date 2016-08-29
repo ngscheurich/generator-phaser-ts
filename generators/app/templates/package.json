@@ -1,14 +1,14 @@
 {
-  "name": "phaser-ts",
+  "name": "<%= projectName %>",
   "version": "1.0.0",
-  "description": "Phaser game engine boilerplate using TypeScript",
+  "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development node index.js",
     "production": "NODE_ENV=production node index.js"
   },
-  "author": "Nicholas Scheurich <nick@scheurich.me>",
-  "license": "ISC",
+  "author": "<% userName %> <<%= email %>>",
+  "license": "<%= license %>",
   "dependencies": {
     "express": "^4.14.0",
     "pug": "^2.0.0-beta5"

@@ -4,7 +4,7 @@ C='\033[0;32m'
 N='\033[0m'
 
 say() {
-    echo "\n${C}>${N} $1"
+    echo "\n${C}*${N} $1"
 }
 
 say "Installing Node.js packages..."

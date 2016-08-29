@@ -7,6 +7,10 @@
   },
   "files": [
     "./typings/index.d.ts",
-    "./src/app.ts"
+    "./src/app.ts",
+    "./src/Game.ts",
+    "./src/Boot.ts",
+    "./src/Preloader.ts",
+    "./src/Start.ts"
   ]
 }

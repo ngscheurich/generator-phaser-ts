@@ -25,7 +25,12 @@ gulp.task('build', ['lint'], () => {
 });
 
 gulp.task('bundle', () => {
-  return gulp.src(['./build/*.js', './lib/**/*.js'])
+  return gulp.src([
+    './lib/phaser.js',
+    './lib/**/*.js',
+    './build/**/!(app).js',
+    './build/app.js'
+  ])
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('./dist'));
 });

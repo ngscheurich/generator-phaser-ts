@@ -76,12 +76,13 @@ You can `npm run production` to locally serve your game using minified code.
 Please note that this an opinionated tool based on my particular preferences.
 That being said, all pull requests are welcome!
 
-## License
+## Licenses
 
-Generator software is ISC (c) 2016 Nicholas Scheurich
+Generator is ISC (c) 2016 Nicholas Scheurich.
 
 Phaser is MIT (c) 2016 Richard Davey, Photo Storm Ltd.
 
+PC font is CC BY-SA 4.0 from INT10h.org.
 
 [1]: http://phaser.io/
 [2]: https://www.typescriptlang.org/
