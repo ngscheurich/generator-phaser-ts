@@ -69,11 +69,11 @@ That being said, all pull requests are welcome!
 
 ## Licenses
 
-Generator is ISC (c) 2016 Nicholas Scheurich
+This project is ISC (c) 2016 Nicholas Scheurich.
 
-Phaser is MIT (c) 2016 Richard Davey, Photo Storm Ltd.
+Phaser is MIT (c) 2016 Richard Davey, Photon Storm Ltd.
 
-PC font is CC BY-SA 4.0 from INT10h.org
+PC font is CC BY-SA 4.0 from INT10h.org.
 
 [1]: http://phaser.io/
 [2]: https://www.typescriptlang.org/
