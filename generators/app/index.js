@@ -40,7 +40,7 @@ module.exports = yeoman.Base.extend({
   },
 
   writing: function () {
-    this.copy('gitignore', '.gitgnore');
+    this.copy('.gitignore', '.gitignore');
     this.copy('Procfile');
     this.copy('gulpfile.js');
     this.copy('index.js');
