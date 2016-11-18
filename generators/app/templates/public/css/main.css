@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'px437_ati_8x16regular';
+  src: url('/fonts/px437_ati_8x16-webfont.woff2') format('woff2'),
+          url('/fonts/px437_ati_8x16-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: wheat;
+  font-family: 'px437_ati_8x16regular';
+}
+
+canvas {
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -4,10 +4,8 @@
 
 A game by <%= userName %>.
 
-## Licenses
+## License
 
-Generator is <%= license %> (c) 2016 <%= userName %> <<%= email %>>
-
-Phaser is MIT (c) 2016 Richard Davey, Photo Storm Ltd.
-
+<%= license %> © 2016 <%= userName %> <<%= email %>><br>
+Phaser is MIT © Richard Davey, Photo Storm Ltd.<br>
 PC font is CC BY-SA 4.0 from INT10h.org

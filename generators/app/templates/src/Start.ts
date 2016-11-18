@@ -7,7 +7,8 @@ namespace <%= namespace %> {
                 "PhaserOS/086DX Rel. 2.6.1",
                 "Copyright (c) Photon Research 1959-1983",
                 "All Rights Reserved.",
-                "\nWelcome, <%= userName %>."
+                "",
+                "Welcome, <%= userName %>."
             ];
 
             const textStyle = {

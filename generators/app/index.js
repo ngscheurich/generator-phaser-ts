@@ -2,7 +2,12 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
-var execSync = require('child_process').execSync;
+
+function notify(verb, noun) {
+  if (process.env.NODE_ENV !== 'test') {
+    console.log(chalk.green('> ') + verb + ' ' + chalk.yellow(noun) + '...');
+  }
+}
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -10,14 +15,14 @@ module.exports = yeoman.Base.extend({
       'Howdy! This is the ' + chalk.red('Phaser TypeScript') + ' generator!'
     ));
 
-    return this.prompt([{
+    var prompts = [{
       type    : 'input',
       name    : 'projectName',
       message : 'So what’s your game called?'
     }, {
       type    : 'input',
       name    : 'description',
-      message : 'Right-o! What’s it like?'
+      message : 'Right-o! Describe it to me in one sentence.'
     }, {
       type    : 'input',
       name    : 'userName',
@@ -31,38 +36,49 @@ module.exports = yeoman.Base.extend({
     }, {
       type    : 'input',
       name    : 'license',
-      message : 'What’s your favorite license?',
+      message : 'What license should your game be published under?',
       default : 'ISC',
       store   : true
-    }]).then(function (answers) {
-      this.answers = answers;
+    }, {
+      type    : 'confirm',
+      name    : 'installDeps',
+      message : 'Shall I install your dependencies?',
+      default : true
+    }, {
+      type    : 'confirm',
+      name    : 'git',
+      message : 'Can I initialize a Git repository for you?',
+      default : true
+    }, {
+      type    : 'confirm',
+      name    : 'heroku',
+      message : 'Would you care for a Heroku app?',
+      default : false
+    }];
+
+    return this.prompt(prompts).then(function (props) {
+      this.props = props;
     }.bind(this));
   },
 
   writing: function () {
-    this.copy('.gitignore', '.gitignore');
-    this.copy('Procfile');
-    this.copy('gulpfile.js');
-    this.copy('index.js');
-    this.copy('setup.sh');
-    this.copy('tsconfig.json');
-    this.copy('typings.json');
-    this.directory('assets');
-    this.directory('lib');
-    this.directory('views');
+    let files = [
+      '.gitignore',
+      'gulpfile.js',
+      'index.js',
+      'lib',
+      'public',
+      'tsconfig.json',
+      'typings.json',
+      'views'
+    ];
 
-    const namespace = this.answers.projectName
-            .split('-')
-            .map((a) => a[0].toUpperCase() + a.slice(1))
-            .join('');
-    const tplData = {
-      projectName: this.answers.projectName,
-      description: this.answers.description,
-      userName: this.answers.userName,
-      email: this.answers.email,
-      license: this.answers.license,
-      namespace: namespace
-    };
+    if (this.props.heroku) files.push('Procfile');
+
+    for (let file of files) {
+      this.fs.copy(this.templatePath(file), file);
+    }
+
     const tplFiles = [
       "LICENSE",
       "package.json",
@@ -74,13 +90,58 @@ module.exports = yeoman.Base.extend({
       "src/Start.ts"
     ];
 
+    const namespace = this.props.projectName
+          .split('-')
+          .map((a) => a[0].toUpperCase() + a.slice(1))
+          .join('');
+
+    const tplData = {
+      projectName: this.props.projectName,
+      description: this.props.description,
+      userName: this.props.userName,
+      email: this.props.email,
+      license: this.props.license,
+      namespace: namespace
+    };
+
     for (const file of tplFiles) {
-      this.fs.copyTpl(this.templatePath(file),
-        this.destinationPath(file), tplData);
+      this.fs.copyTpl(
+        this.templatePath(file),
+        this.destinationPath(file),
+        tplData
+      );
     }
   },
 
   install: function () {
-    this.spawnCommand('./setup.sh');
+    if (this.props.installDeps) {
+      console.log();
+      notify('Installing', 'Node.js packages');
+      this.spawnCommandSync('yarn', ['install']);
+
+      console.log();
+      notify('Installing', 'type definitions');
+      this.spawnCommandSync('typings', ['install']);
+
+      notify('Creating', 'initial build');
+      this.spawnCommandSync('gulp', ['compress']);
+    }
+
+    if (this.props.git) {
+      console.log();
+      notify('Initializing', 'Git repository');
+      this.spawnCommandSync('git', ['init']);
+    }
+
+    if (this.props.heroku && process.env.NODE_ENV !== 'test') {
+      console.log();
+      notify('Creating', 'Heroku app');
+      this.spawnCommandSync('heroku', ['create']);
+    }
+
+    if (process.env.NODE_ENV !== 'test') {
+      console.log();
+      console.log(`👾  All done! Run ${chalk.yellow('yarn server')} to serve up the demo game.`);
+    }
   }
 });

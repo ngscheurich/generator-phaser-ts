@@ -1,23 +1,24 @@
 {
   "name": "<%= projectName %>",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "<%= description %>",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development node index.js",
-    "production": "NODE_ENV=production node index.js"
+    "deploy": "gulp deploy",
+    "devel": "gulp watch & node index.js",
+    "production": "NODE_ENV=production node index.js",
+    "server": "node index.js"
   },
   "author": "<% userName %> <<%= email %>>",
   "license": "<%= license %>",
   "dependencies": {
-    "express": "^4.14.0",
-    "pug": "^2.0.0-beta5"
+    "express": "^4.14.0"
   },
   "devDependencies": {
     "eslint": "^3.3.1",
-    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-git": "^1.11.1",
+    "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
     "gulp-tslint": "^6.1.1",
     "gulp-typescript": "^2.13.6",
