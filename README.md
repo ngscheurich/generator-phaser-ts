@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/ngscheurich/generator-phaser-ts.png?label=ready&title=Ready)](https://waffle.io/ngscheurich/generator-phaser-ts)
 # Phaser TypeScript project generator
 
 This provides a handy jump-start for a [Phaser][1] project using [TypeScript][2].
