@@ -125,5 +125,5 @@ PC font is CC BY-SA 4.0 from INT10h.org.
 [build-url]: https://travis-ci.org/ngscheurich/generator-phaser-ts
 [coverage-image]: https://coveralls.io/repos/github/ngscheurich/generator-phaser-ts/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/ngscheurich/generator-phaser-ts?branch=master
-[deps-image]: https://david-dm.org/the-advocate/generator-phaser-ts.svg?theme=shields.io
-[deps-url]: https://david-dm.org/the-advocate/generator-phaser-ts
+[deps-image]: https://david-dm.org/ngscheurich/generator-phaser-ts.svg?theme=shields.io
+[deps-url]: https://david-dm.org/ngscheurich/generator-phaser-ts
