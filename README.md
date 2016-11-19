@@ -1,4 +1,4 @@
-# Phaser + TypeScript generator
+# 👾 Phaser + TypeScript generator
 
 [![Package version][package-image]][package-url]
 [![Build status][build-image]][build-url]
@@ -14,7 +14,7 @@ In addition to a ready-to-code scaffolding, you get
 stuff like:
 
 - A fully-functional Phaser project, complete with TypeScript type definitions
-- Automated tasks for compiling, concatenating, deploying, et al.
+- Automated tasks for compiling, bundling, and deploying
 - A demo game to get you going
 - A [Heroku][heroku] deployment setup
 
