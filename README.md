@@ -1,4 +1,4 @@
-# Phaser TypeScript generator
+# Phaser + TypeScript generator
 
 [![Package version][package-image]][package-url]
 [![Build status][build-image]][build-url]
