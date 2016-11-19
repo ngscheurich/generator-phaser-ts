@@ -6,7 +6,7 @@ This provides a handy jump-start for a [Phaser][phaser] project using
 - A fully-functional Phaser project, complete with TypeScript type definitions
 - Automated tasks for compiling, concatenating, deploying, et al.
 - A demo “game” to get you going
-- A Heroku deployment setup
+- A [Heroku][heroku] deployment setup
 
 ## Requirements
 
@@ -58,7 +58,7 @@ what you’ll be doing most of the time, run `yarn devel`.
 
 ## Deployment
 
-Included is a [Heroku][heroku]-compatible [Procfile][heroku-procfile] so—assuming
+Included is a Heroku-compatible [Procfile][heroku-procfile] so—assuming
 you have the [Heroku Command Line Interface][heroku-cli] installed and you’re logged
 in—getting your game up on them internets should be as simple as:
 
@@ -87,4 +87,4 @@ PC font is CC BY-SA 4.0 from INT10h.org.
 [heroku-procfile]: https://devcenter.heroku.com/articles/procfile
 [heroku-cli]: https://devcenter.heroku.com/articles/heroku-command-line
 [yeoman]: http://yeoman.io/
-[yarnpkg]: https://yarnpkg.com/
+[yarn]: https://yarnpkg.com/
