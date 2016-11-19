@@ -15,7 +15,7 @@ stuff like:
 
 - A fully-functional Phaser project, complete with TypeScript type definitions
 - Automated tasks for compiling, concatenating, deploying, et al.
-- A demo “game” to get you going
+- A demo game to get you going
 - A [Heroku][heroku] deployment setup
 
 ## Requirements
