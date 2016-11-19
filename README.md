@@ -5,8 +5,11 @@
 [![Coverage status][coverage-image]][coverage-url]
 [![Dependency Status][deps-image]][deps-url]
 
-This provides a handy jump-start for a [Phaser][phaser] project using
-[TypeScript][typescript]. In addition to a ready-to-code scaffolding, you get
+Provides a handy jump-start for a [Phaser][phaser] + [TypeScript][typescript] project.
+
+<img src="screenshot.jpg" alt="Demo game screenshot" width="100%">
+
+In addition to a ready-to-code scaffolding, you get
 stuff like:
 
 - A fully-functional Phaser project, complete with TypeScript type definitions
