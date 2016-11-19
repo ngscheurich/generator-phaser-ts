@@ -5,7 +5,8 @@
 [![Coverage status][coverage-image]][coverage-url]
 [![Dependency Status][deps-image]][deps-url]
 
-Provides a handy jump-start for a [Phaser][phaser] + [TypeScript][typescript] project.
+Provides a handy jump-start for a [Phaser][phaser] project with a
+[TypeScript][typescript] codebase.
 
 <img src="screenshot.jpg" alt="Demo game screenshot" width="100%">
 
