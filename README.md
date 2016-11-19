@@ -1,5 +1,10 @@
 # Phaser TypeScript generator
 
+[![Package version][package-image]][package-url]
+[![Build status][build-image]][build-url]
+[![Coverage status][coverage-image]][coverage-url]
+[![Dependency Status][deps-image]][deps-url]
+
 This provides a handy jump-start for a [Phaser][phaser] project using
 [TypeScript][typescript]. In addition to a ready-to-code scaffolding, you get
 stuff like:
@@ -114,3 +119,11 @@ PC font is CC BY-SA 4.0 from INT10h.org.
 [heroku-cli]: https://devcenter.heroku.com/articles/heroku-command-line
 [yeoman]: http://yeoman.io/
 [yarn]: https://yarnpkg.com/
+[package-image]: https://badge.fury.io/js/generator-phaser-ts.svg
+[package-url]: https://npmjs.org/package/generator-phaser-ts
+[build-image]: https://travis-ci.org/ngscheurich/generator-phaser-ts.svg?branch=master
+[build-url]: https://travis-ci.org/ngscheurich/generator-phaser-ts
+[coverage-image]: https://coveralls.io/repos/github/ngscheurich/generator-phaser-ts/badge.svg?branch=master
+[coverage-url]: https://coveralls.io/github/ngscheurich/generator-phaser-ts?branch=master
+[deps-image]: https://david-dm.org/the-advocate/generator-phaser-ts.svg?theme=shields.io
+[deps-url]: https://david-dm.org/the-advocate/generator-phaser-ts
