@@ -1,7 +1,7 @@
 # Phaser TypeScript project generator
 
-This provides a handy jump-start for a [Phaser][1] project using [TypeScript][2].
-In addition to a ready-to-code scaffolding, you get great stuff like:
+This provides a handy jump-start for a [Phaser][phaser] project using
+[TypeScript][typescript]. In addition to a ready-to-code scaffolding, you get stuff like:
 
 - A fully-functional Phaser project, complete with type TypeScript type definitions
 - Automated tasks for compilation, concatenation, minification, et al.
@@ -10,16 +10,18 @@ In addition to a ready-to-code scaffolding, you get great stuff like:
 
 ## Requirements
 
-There’s really only one measly requirement for this project:
+There’s two things you’re gonna want to have installed globally before you run
+this generator:
 
-- [Typings][5], installed globally
+- [Yarn][yarn]
+- [Typings][typings]
 
-Of course, you’ll also need [Node.js][3], [npm][4], and [Yeoman][11], but you
-already knew that, no?
+Of course, you’ll also need [Node.js][nodejs] and [Yeoman][yeoman], but you
+already knew that, yeah?
 
 ## Installation
 
-    $ npm install -g generator-phaser-ts
+    $ yarn global add generator-phaser-ts
 
 That’s it.
 
@@ -27,40 +29,42 @@ That’s it.
 
     $ yo phaser-ts
     
-This gets your files all in the proper places, installs all software
+This gets your files all in the proper spots, installs software
 requirements, and does an initial build of the included demo game.
 
 ## Development
 
-This project uses [Gulp][6] to automate various common development tasks:
+This project uses [Gulp][gulp] to automate various common development tasks:
 
 - `gulp lint`: Processes all .ts files in the src directory with `tslint` and
   displays the results
 - `gulp build`: Compiles all .ts files in the src directory after running the
   `lint` task; outputs .js files to the build directory
 - `gulp bundle`: Concatenates all .js files in the build and lib directories
-  into a single file: dist/bundle.js
-- `gulp compress`: Uglifies dist/bundle.js; outputs dist/bundle.min.js
+  into a single file: .build/bundle.js
+- `gulp compress`: Uglifies .build/bundle.js; outputs build/bundle.min.js
 - `gulp watch`: Watches for changes to files; when a change to a file is
-  detected, runs the appropriate task (`build` or `bundle`)
-- `gulp deploy`: See below.
-- `gulp`: The default Gulp task. Runs the `build` task followed by the `bundle`
-  task.
+  detected, runs the appropriate `bundle` task and reloads the website.
+- `gulp deploy`: Deploys to Heroku. See below.
+- `gulp`: The default Gulp task. Runs the `bundle` task.
 
 For convenience, this project includes a basic Node.js application that serves
-up your games courtesy of the [Express][7] framework. To start the Express
-server, run `npm start`. You should now be able to see your game at something
+up your game courtesy of the [Express][express] framework. To start the Express
+server, run `yarn server`. You should now be able to see your game at something
 along the lines of [http://localhost:3000](http://localhost:3000).
+
+If you would like to run the server as well as rebuild your files upon save, i.e.
+what you’ll be doing most of the time, run `yarn devel`.
 
 ## Deployment
 
-Included is a [Heroku][8]-compatible [Procfile][9] so—assuming you have the
-[Heroku Command Line Interface][9] installed and you’re logged in—getting
-your game up on them internets should be as simple as:
+Included is a [Heroku][heroku]-compatible [Procfile][heroku-procfile] so—assuming
+you have the [Heroku Command Line Interface][heroku-cli] installed and you’re logged
+in—getting your game up on them internets should be as simple as:
 
-    $ gulp deploy
+    $ yarn deploy
 
-You can `npm run production` to locally serve your game using minified code.
+You can `yarn production` to locally serve your game using minified code.
 
 ## Contributing
 
@@ -69,20 +73,18 @@ That being said, all pull requests are welcome!
 
 ## Licenses
 
-This project is ISC (c) 2016 Nicholas Scheurich.
-
-Phaser is MIT (c) 2016 Richard Davey, Photon Storm Ltd.
-
+This project is ISC (c) 2016 Nicholas Scheurich.<br>
+Phaser is MIT (c) 2016 Richard Davey, Photon Storm Ltd.<br>
 PC font is CC BY-SA 4.0 from INT10h.org.
 
-[1]: http://phaser.io/
-[2]: https://www.typescriptlang.org/
-[3]: https://nodejs.org/en/
-[4]: https://www.npmjs.com/
-[5]: https://github.com/typings/typings
-[6]: http://gulpjs.com/
-[7]: https://expressjs.com/
-[8]: https://www.heroku.com/
-[9]: https://devcenter.heroku.com/articles/procfile
-[10]: https://devcenter.heroku.com/articles/heroku-command-line
-[11]: http://yeoman.io/
+[phaser]: http://phaser.io/
+[typescript]: https://www.typescriptlang.org/
+[nodejs]: https://nodejs.org/en/
+[typings]: https://github.com/typings/typings
+[gulp]: http://gulpjs.com/
+[express]: https://expressjs.com/
+[heroku]: https://www.heroku.com/
+[heroku-procfile]: https://devcenter.heroku.com/articles/procfile
+[heroku-cli]: https://devcenter.heroku.com/articles/heroku-command-line
+[yeoman]: http://yeoman.io/
+[yarnpkg]: https://yarnpkg.com/
