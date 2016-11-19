@@ -1,4 +1,4 @@
-# Phaser TypeScript project generator
+# Phaser TypeScript generator
 
 This provides a handy jump-start for a [Phaser][phaser] project using
 [TypeScript][typescript]. In addition to a ready-to-code scaffolding, you get stuff like:
