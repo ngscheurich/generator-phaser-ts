@@ -3,8 +3,8 @@
 This provides a handy jump-start for a [Phaser][phaser] project using
 [TypeScript][typescript]. In addition to a ready-to-code scaffolding, you get stuff like:
 
-- A fully-functional Phaser project, complete with type TypeScript type definitions
-- Automated tasks for compilation, concatenation, minification, et al.
+- A fully-functional Phaser project, complete with TypeScript type definitions
+- Automated tasks for compiling, concatenating, deploying, et al.
 - A demo “game” to get you going
 - A Heroku deployment setup
 
