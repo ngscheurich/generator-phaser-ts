@@ -47,7 +47,8 @@
   },
   "repository": "ngscheurich/generator-phaser-ts",
   "scripts": {
-    "prepublish": "gulp prepublish"
+    "prepublish": "gulp prepublish",
+    "test": "mocha"
   },
   "license": "ISC"
 }
