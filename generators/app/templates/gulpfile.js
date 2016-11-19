@@ -4,11 +4,12 @@ const git        = require('gulp-git');
 const livereload = require('gulp-livereload');
 const rename     = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const ts         = require('gulp-typescript');
+const typescript = require('gulp-typescript');
 const tslint     = require('gulp-tslint');
 const uglify     = require('gulp-uglify');
+const util       = require('gulp-util');
 
-const tsProject = ts.createProject('./tsconfig.json');
+const tsProject = typescript.createProject('tsconfig.json');
 
 gulp.task('lint', () => {
   tsProject.src()
@@ -18,11 +19,10 @@ gulp.task('lint', () => {
 
 gulp.task('build', ['lint'], () => {
   const tsResult = tsProject.src()
-    .pipe(ts(tsProject));
+    .pipe(typescript(tsProject));
 
   return tsResult.js
     .pipe(gulp.dest('.build'));
-    livereload();
 });
 
 gulp.task('bundle', ['build'], () => {
@@ -32,7 +32,8 @@ gulp.task('bundle', ['build'], () => {
     '.build/app.js'
   ])
     .pipe(concat('bundle.js'))
-    .pipe(gulp.dest('public/js'));
+    .pipe(gulp.dest('public/js'))
+    .pipe(process.env.LIVERELOAD != '0' ? livereload() : util.noop());
 });
 
 gulp.task('compress', ['bundle'], () => {
@@ -45,8 +46,8 @@ gulp.task('compress', ['bundle'], () => {
 });
 
 gulp.task('watch', ['bundle'], () => {
-    livereload.listen();
-    gulp.watch(['src/**/*.ts', 'tsconfig.json'], ['bundle']);
+  if (process.env.LIVERELOAD != '0') livereload.listen();
+  gulp.watch(['src/**/*.ts', 'tsconfig.json'], ['bundle']);
 });
 
 gulp.task('deploy', ['compress'], () => {
