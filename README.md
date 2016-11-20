@@ -25,7 +25,6 @@ this generator:
 
 - [Yarn][yarn]
 - [Typings][typings]
-- [Gulp][gulp]
 
 Of course, you’ll also need [Node.js][nodejs] and [Yeoman][yeoman], but you
 already knew that, yeah?
