@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "eslint": "^3.3.1",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-git": "^1.11.1",
     "gulp-livereload": "^3.8.1",
@@ -24,6 +25,7 @@
     "gulp-typescript": "^2.13.6",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
+    "pug": "^2.0.0-beta6",
     "tslint": "^3.15.1",
     "typescript": "^1.8.10",
     "typescript-tools": "github:clausreinke/typescript-tools"
