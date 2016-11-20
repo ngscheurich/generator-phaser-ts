@@ -1,6 +1,6 @@
 {
   "name": "generator-phaser-ts",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A Phaser project generator with TypeScript and Gulp tasks.",
   "homepage": "https://github.com/ngscheurich/generator-phaser-ts",
   "author": {
