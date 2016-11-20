@@ -20,11 +20,12 @@ stuff like:
 
 ## Requirements
 
-There’s two things you’re gonna want to have installed globally before you run
+There’s a few things you’re gonna want to have installed globally before you run
 this generator:
 
 - [Yarn][yarn]
 - [Typings][typings]
+- [Gulp][gulp]
 
 Of course, you’ll also need [Node.js][nodejs] and [Yeoman][yeoman], but you
 already knew that, yeah?
