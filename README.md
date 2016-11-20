@@ -1,22 +1,26 @@
-# Phaser TypeScript generator
+# 👾 Phaser + TypeScript generator
 
 [![Package version][package-image]][package-url]
 [![Build status][build-image]][build-url]
 [![Coverage status][coverage-image]][coverage-url]
 [![Dependency Status][deps-image]][deps-url]
 
-This provides a handy jump-start for a [Phaser][phaser] project using
-[TypeScript][typescript]. In addition to a ready-to-code scaffolding, you get
+Provides a handy jumpstart for a [Phaser][phaser] project with a
+[TypeScript][typescript] codebase.
+
+<img src="screenshot.jpg" alt="Demo game screenshot" width="100%">
+
+In addition to a ready-to-code scaffolding, you get
 stuff like:
 
 - A fully-functional Phaser project, complete with TypeScript type definitions
-- Automated tasks for compiling, concatenating, deploying, et al.
-- A demo “game” to get you going
+- Automated tasks for compiling, bundling, and deploying
+- A demo game to get you going
 - A [Heroku][heroku] deployment setup
 
 ## Requirements
 
-There’s two things you’re gonna want to have installed globally before you run
+There’s a few things you’re gonna want to have installed globally before you run
 this generator:
 
 - [Yarn][yarn]
@@ -125,5 +129,5 @@ PC font is CC BY-SA 4.0 from INT10h.org.
 [build-url]: https://travis-ci.org/ngscheurich/generator-phaser-ts
 [coverage-image]: https://coveralls.io/repos/github/ngscheurich/generator-phaser-ts/badge.svg?branch=master
 [coverage-url]: https://coveralls.io/github/ngscheurich/generator-phaser-ts?branch=master
-[deps-image]: https://david-dm.org/the-advocate/generator-phaser-ts.svg?theme=shields.io
-[deps-url]: https://david-dm.org/the-advocate/generator-phaser-ts
+[deps-image]: https://david-dm.org/ngscheurich/generator-phaser-ts.svg?theme=shields.io
+[deps-url]: https://david-dm.org/ngscheurich/generator-phaser-ts
