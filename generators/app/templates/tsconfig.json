@@ -2,15 +2,15 @@
   "compilerOptions": {
     "target": "es5",
     "noImplicitAny": true,
-    "outDir": "./build",
-    "rootDir": "./src"
+    "outDir": "build",
+    "rootDir": "src"
   },
   "files": [
-    "./typings/index.d.ts",
-    "./src/app.ts",
-    "./src/Game.ts",
-    "./src/Boot.ts",
-    "./src/Preloader.ts",
-    "./src/Start.ts"
+    "node_modules/phaser-ce/typescript/phaser.d.ts",
+    "src/app.ts",
+    "src/Game.ts",
+    "src/Boot.ts",
+    "src/Preloader.ts",
+    "src/Start.ts"
   ]
 }
