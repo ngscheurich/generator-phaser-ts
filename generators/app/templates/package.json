@@ -32,6 +32,6 @@
     "typescript-tools": "github:clausreinke/typescript-tools"
   },
   "engines": {
-    "node": "6.2.2"
+    "node": "7.1.0"
   }
 }
