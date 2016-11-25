@@ -69,8 +69,6 @@ module.exports = yeoman.Base.extend({
       'lib',
       'public',
       'tsconfig.json',
-      'typings.json',
-      'views'
     ];
 
     if (this.props.heroku) files.push('Procfile');
@@ -118,10 +116,6 @@ module.exports = yeoman.Base.extend({
       console.log();
       notify('Installing', 'Node.js packages');
       this.spawnCommandSync('yarn', ['install']);
-
-      console.log();
-      notify('Installing', 'type definitions');
-      this.spawnCommandSync('typings', ['install']);
 
       notify('Creating', 'initial build');
       this.spawnCommandSync('gulp', ['compress']);
