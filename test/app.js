@@ -30,7 +30,6 @@ describe('generator-phaser-ts:app without Heroku', function () {
       'README.md',
       'src',
       'tsconfig.json',
-      'typings.json',
       'views'
     ]);
   });

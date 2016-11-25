@@ -69,6 +69,7 @@ module.exports = yeoman.Base.extend({
       'lib',
       'public',
       'tsconfig.json',
+      'views'
     ];
 
     if (this.props.heroku) files.push('Procfile');
