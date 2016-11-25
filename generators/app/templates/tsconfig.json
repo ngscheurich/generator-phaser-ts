@@ -11,6 +11,6 @@
     "src/Game.ts",
     "src/Boot.ts",
     "src/Preloader.ts",
-    "src/Start.ts"
+    "src/Main.ts"
   ]
 }

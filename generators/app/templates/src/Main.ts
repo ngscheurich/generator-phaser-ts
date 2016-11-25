@@ -1,6 +1,6 @@
 namespace <%= namespace %> {
 
-    export class Start extends Phaser.State {
+    export class Main extends Phaser.State {
 
         create() {
             const lines = [

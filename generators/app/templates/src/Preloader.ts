@@ -7,7 +7,7 @@ namespace <%= namespace %> {
         }
 
         create() {
-            this.game.state.start("Start");
+            this.game.state.start("Main");
         }
     }
 }

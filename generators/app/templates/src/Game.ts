@@ -7,7 +7,7 @@ namespace <%= namespace %> {
 
             this.state.add("Boot", <%= namespace %>.Boot);
             this.state.add("Preloader", <%= namespace %>.Preloader);
-            this.state.add("Start", <%= namespace %>.Start);
+            this.state.add("Main", <%= namespace %>.Main);
 
             this.state.start("Boot");
         }
