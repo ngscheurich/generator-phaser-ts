@@ -12,7 +12,7 @@ function notify(verb, noun) {
 module.exports = yeoman.Base.extend({
   prompting: function () {
     this.log(yosay(
-      'Howdy! This is the ' + chalk.red('Phaser TypeScript') + ' generator!'
+      'Howdy! This is the ' + chalk.red('Phaser TypeScript') + ' generator (v0.2.12)!'
     ));
 
     var prompts = [{
@@ -86,7 +86,7 @@ module.exports = yeoman.Base.extend({
       "src/Boot.ts",
       "src/Game.ts",
       "src/Preloader.ts",
-      "src/Start.ts"
+      "src/Main.ts"
     ];
 
     const namespace = this.props.projectName
