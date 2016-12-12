@@ -21,6 +21,7 @@ describe('generator-phaser-ts:app without Heroku', function () {
 
   it('creates default files', function () {
     assert.file([
+      '.gitignore',
       'gulpfile.js',
       'index.js',
       'lib',

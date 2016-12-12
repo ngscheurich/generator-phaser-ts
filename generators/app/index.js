@@ -63,7 +63,6 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
     let files = [
-      '.gitignore',
       'gulpfile.js',
       'index.js',
       'lib',
@@ -77,6 +76,7 @@ module.exports = yeoman.Base.extend({
     for (let file of files) {
       this.fs.copy(this.templatePath(file), file);
     }
+    this.fs.copy(this.templatePath('gitignore'), '.gitignore');
 
     const tplFiles = [
       "LICENSE",
