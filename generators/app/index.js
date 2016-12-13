@@ -31,7 +31,7 @@ module.exports = yeoman.Base.extend({
     }, {
       type    : 'input',
       name    : 'email',
-      message : 'And your electronic mail address?',
+      message : 'And what is your electronic mail address?',
       store   : true
     }, {
       type    : 'input',
