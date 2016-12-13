@@ -144,7 +144,7 @@ module.exports = yeoman.Base.extend({
 
     if (process.env.NODE_ENV !== 'test') {
       console.log();
-      console.log(`👾  All done! Run ${chalk.yellow('npm server')} to serve up the demo game.`);
+      console.log(`👾  All done! Run ${chalk.yellow('npm start')} to serve up the demo game.`);
     }
   }
 });
