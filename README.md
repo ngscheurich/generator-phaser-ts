@@ -25,7 +25,7 @@ already knew that, yeah?
 
 ## Installation
 
-    $ npm global add generator-phaser-ts
+    $ npm install -g generator-phaser-ts
 
 That’s it.
 
