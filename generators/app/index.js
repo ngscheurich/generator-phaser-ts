@@ -124,7 +124,7 @@ module.exports = yeoman.Base.extend({
     if (this.props.installDeps) {
       console.log();
       notify('Installing', 'Node.js packages');
-      this.spawnCommandSync('yarn', ['install']);
+      this.spawnCommandSync('npm', ['install']);
 
       notify('Creating', 'initial build');
       this.spawnCommandSync('gulp', ['compress']);
@@ -144,7 +144,7 @@ module.exports = yeoman.Base.extend({
 
     if (process.env.NODE_ENV !== 'test') {
       console.log();
-      console.log(`👾  All done! Run ${chalk.yellow('yarn server')} to serve up the demo game.`);
+      console.log(`👾  All done! Run ${chalk.yellow('npm server')} to serve up the demo game.`);
     }
   }
 });

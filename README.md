@@ -20,33 +20,14 @@ stuff like:
 
 ## Requirements
 
-This tool only has one measly requirement: [Yarn][yarn].
-
-Of course, you’ll also need [Node.js][nodejs] and [Yeoman][yeoman], but you
+You’ll need [Node.js][nodejs], [npm][npm], and [Yeoman][yeoman], but you
 already knew that, yeah?
 
 ## Installation
 
-    $ yarn global add generator-phaser-ts
+    $ npm global add generator-phaser-ts
 
 That’s it.
-
-### Caveats
-
-If the above installation command yields unsatisfactory results, give npm a crack
-at it, i.e. `npm i -g generator-phaser-ts`.
-
-If Yarn yells at you about the installation of anything, you may need to install
-the current stable version, (at the time of writing) 0.16.1. If you’re using
-Homebrew, you’ll need to make sure you’ve checked out the proper version of the
-Yarn formula. In my case, this did the trick:
-
-``` shell
-$ cd /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula/
-$ git checkout ca1c753c6df92e46962c14b01e597c60fc299c5c yarn.rb
-$ brew install yarn
-$ git checkout HEAD yarn.rb
-```
 
 ## Usage
 
@@ -78,14 +59,14 @@ that should cover your day-to-day needs.:
 
 For convenience, this project includes a basic Node.js application that serves
 up your game courtesy of the [Express][express] framework. To start the Express
-server, run `yarn server`. You should now be able to see your game running at
+server, run `npm server`. You should now be able to see your game running at
 [http://localhost:3000](http://localhost:3000).
 
 If you would like to run the server as well as rebuild your files upon save, i.e.
-what you’ll be doing most of the time, run `yarn devel`.
+what you’ll be doing most of the time, run `npm devel`.
 
 **PRO TIP:** If you want to run the server but *not* rebuild files upon save, set
-the `LIVERELOAD` environment variable to `0`: `LIVERELOAD=0 yarn devel`.
+the `LIVERELOAD` environment variable to `0`: `LIVERELOAD=0 npm devel`.
 
 ## Deployment
 
@@ -93,9 +74,9 @@ Included is a Heroku-compatible [Procfile][heroku-procfile] so—assuming
 you have the [Heroku Command Line Interface][heroku-cli] installed and you’re logged
 in—getting your game up on them internets should be as simple as:
 
-    $ yarn deploy
+    $ npm deploy
 
-**PRO TIP:** You can `yarn production` to locally serve your game using minified code.
+**PRO TIP:** You can `npm production` to locally serve your game using minified code.
 
 ## Contributing
 
@@ -108,6 +89,7 @@ This project is ISC © Nicholas Scheurich.<br>
 *Phaser* is MIT © Richard Davey, Photon Storm Ltd.<br>
 PC font is CC BY-SA 4.0 from INT10h.org.
 
+[npm]: https://www.npmjs.com/
 [phaser]: http://phaser.io/
 [typescript]: https://www.typescriptlang.org/
 [nodejs]: https://nodejs.org/en/
@@ -118,7 +100,6 @@ PC font is CC BY-SA 4.0 from INT10h.org.
 [heroku-procfile]: https://devcenter.heroku.com/articles/procfile
 [heroku-cli]: https://devcenter.heroku.com/articles/heroku-command-line
 [yeoman]: http://yeoman.io/
-[yarn]: https://yarnpkg.com/
 [package-image]: https://badge.fury.io/js/generator-phaser-ts.svg
 [package-url]: https://npmjs.org/package/generator-phaser-ts
 [build-image]: https://travis-ci.org/ngscheurich/generator-phaser-ts.svg?branch=master
