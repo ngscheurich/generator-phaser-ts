@@ -59,14 +59,14 @@ that should cover your day-to-day needs.:
 
 For convenience, this project includes a basic Node.js application that serves
 up your game courtesy of the [Express][express] framework. To start the Express
-server, run `npm server`. You should now be able to see your game running at
+server, run `npm start`. You should now be able to see your game running at
 [http://localhost:3000](http://localhost:3000).
 
 If you would like to run the server as well as rebuild your files upon save, i.e.
-what you’ll be doing most of the time, run `npm devel`.
+what you’ll be doing most of the time, run `npm run devel`.
 
 **PRO TIP:** If you want to run the server but *not* rebuild files upon save, set
-the `LIVERELOAD` environment variable to `0`: `LIVERELOAD=0 npm devel`.
+the `LIVERELOAD` environment variable to `0`: `LIVERELOAD=0 npm run devel`.
 
 ## Deployment
 
@@ -74,9 +74,9 @@ Included is a Heroku-compatible [Procfile][heroku-procfile] so—assuming
 you have the [Heroku Command Line Interface][heroku-cli] installed and you’re logged
 in—getting your game up on them internets should be as simple as:
 
-    $ npm deploy
+    $ npm run deploy
 
-**PRO TIP:** You can `npm production` to locally serve your game using minified code.
+**PRO TIP:** You can `npm run production` to locally serve your game using minified code.
 
 ## Contributing
 
