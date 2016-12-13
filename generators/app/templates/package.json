@@ -1,5 +1,5 @@
 {
-  "name": "<%= projectName %>",
+  "name": "<%= packageName %>",
   "version": "0.1.0",
   "description": "<%= description %>",
   "main": "index.js",

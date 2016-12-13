@@ -12,7 +12,7 @@ function notify(verb, noun) {
 module.exports = yeoman.Base.extend({
   prompting: function () {
     this.log(yosay(
-      'Howdy! This is the ' + chalk.red('Phaser TypeScript') + ' generator (v0.2.12)!'
+      'Howdy! This is the ' + chalk.red('Phaser TypeScript') + ' generator!'
     ));
 
     var prompts = [{
@@ -31,7 +31,7 @@ module.exports = yeoman.Base.extend({
     }, {
       type    : 'input',
       name    : 'email',
-      message : 'Have an electronic mail address?',
+      message : 'And your electronic mail address?',
       store   : true
     }, {
       type    : 'input',
@@ -47,7 +47,7 @@ module.exports = yeoman.Base.extend({
     }, {
       type    : 'confirm',
       name    : 'git',
-      message : 'Can I initialize a Git repository for you?',
+      message : 'Might I initialize a Git repository for you?',
       default : true
     }, {
       type    : 'confirm',
@@ -89,8 +89,15 @@ module.exports = yeoman.Base.extend({
       "src/Main.ts"
     ];
 
+    const packageName = this.props.projectName
+          .toLowerCase()
+          .replace(/[^\w\s]/gi, '')
+          .split(' ')
+          .join('-');
+
     const namespace = this.props.projectName
-          .split('-')
+          .replace(/[^\w\s]/gi, '')
+          .split(' ')
           .map((a) => a[0].toUpperCase() + a.slice(1))
           .join('');
 
@@ -100,6 +107,7 @@ module.exports = yeoman.Base.extend({
       userName: this.props.userName,
       email: this.props.email,
       license: this.props.license,
+      packageName: packageName,
       namespace: namespace
     };
 

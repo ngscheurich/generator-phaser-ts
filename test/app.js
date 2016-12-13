@@ -6,7 +6,7 @@ var helpers = require('yeoman-test');
 process.env.NODE_ENV = 'test';
 
 var prompts = {
-  projectName: 'example-game',
+  projectName: "Nick's Test Game",
   installDeps: false,
   git: false,
   heroku: false
@@ -39,8 +39,12 @@ describe('generator-phaser-ts:app without Heroku', function () {
     assert.noFile('Procfile');
   });
 
-  it('fills in user-provided info', function () {
-    assert.fileContent('src/app.ts', /new ExampleGame.Game()/);
+  it('generates package name correctly', function () {
+    assert.fileContent('package.json', /"name": "nicks-test-game"/);
+  });
+
+  it('generates namespace correctly', function () {
+    assert.fileContent('src/app.ts', /new NicksTestGame.Game()/);
   });
 });
 
