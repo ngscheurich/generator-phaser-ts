@@ -62,7 +62,7 @@ up your game courtesy of the [Express][express] framework. To start the Express
 server, run `npm start`. You should now be able to see your game running at
 [http://localhost:3000](http://localhost:3000).
 
-If you would like to run the server as well as rebuild your files upon save, i.e.
+If you would like to run the server as well as rebuild your files upon save, i.e.,
 what you’ll be doing most of the time, run `npm run devel`.
 
 **PRO TIP:** If you want to run the server but *not* rebuild files upon save, set
