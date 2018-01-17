@@ -18,7 +18,7 @@ namespace <%= namespace %> {
             };
 
             let y = 20;
-            for (const line of lines) {
+            for (let line of lines) {
                 this.game.add.text(20, y, line, textStyle);
                 y += 26;
             }
